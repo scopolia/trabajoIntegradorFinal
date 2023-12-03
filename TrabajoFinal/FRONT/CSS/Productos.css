@@ -41,6 +41,9 @@ img{
     display: flex;
     padding: 2vw;
 }
+.img_card img{
+    width: 100%;
+}
 
 .marca_card{
     display: flex;
