@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/tablaContactos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="../CSS/Style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+   
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&family=Indie+Flower&display=swap" rel="stylesheet">
+    <title>Lo q sea</title>
+    <script src="https://kit.fontawesome.com/a8c2996f32.js" crossorigin="anonymous"></script>
+    
+    <title>Document</title>
+</head>
+<body>
+
+    <header >
+        <div class="container_header">
+            <div id="bt_burger" class="boton_burger"><i class="fa-solid fa-bars" style="color: #d6b53d;"></i></div>
+            <div class="logo__empresa"><img class="logo__bt" src="../IMG/logo_final.png"></div>
+            <nav  class="container__bt">
+                <ul id="menu__item"class="item__menu">
+                    <li class="opciones__menu"><a href="opciones_back.html" class="texto__desplegado"><i class="fa-solid fa-house" style="color: #f7f7f7;"></i></a></li>
+                    
+                    
+                    
+                   
+                </ul>     
+            </nav> 
+        </div>    
+        <div class="Separador__menu"></div>
+        
+    </header>
+
+    <main>
+
+        <section class="container-fluid p-3">
+            <div id="app" >
+
+                <!-- Botón Nuevo -->
+                
+                <a href="ingresarContacto.html" class="nuevo">Ingresar contacto</a>
+
+                <section v-if="error">Lo sentimos se produjo un error</section>
+                <section v-else>
+                    <section v-if="cargando">
+                        <div class="spinner-border"></div>
+                        <p>Cargando .....</p>
+
+                    </section>
+                    <section v-else>
+                        
+                        <div >
+                            <table class="table table-success table-hover">
+                                <thead>
+                                    <tr class="table-dark">
+                                        <th >ID</th>
+                                        <th>Nombre</th>
+                                        <th>Apellido</th>
+                                        <th>Dni</th>
+                                        <th>Telefono</th>
+                                        <th>Mail</th>
+                                        <th>Comentario</th>
+                                        <th>Eliminar</th>
+                                        <th>Editar</th>
+                                    </tr>
+                                </thead>
+                                <tbody >
+                                   
+                                    <tr v-for="contacto in contactos">
+                                        <td >{{contacto.id}}</td>
+                                        <td>{{contacto.nombre}}</td>
+                                        <td>{{contacto.apellido}}</td>
+                                        <td>{{contacto.dni}}</td>
+                                        <td>{{contacto.telefono}}</td>
+                                        <td>{{contacto.mail}}</td>
+                                        <td>{{contacto.texto}}</td>
+                                      
+                                        
+                                        <td>
+                                            
+                                            <button class="boton_rojo" type="button" v-on:click="eliminar(contacto.id)" ><i class="fa-solid fa-trash fa-lg" ></i></button>
+                                        </td>
+                                        <td>
+                                            <a class="boton_verde" :href="'editarContacto.html?id='
+                                            + contacto.id+
+                                            '&nombre=' 
+                                            +contacto.nombre+
+                                            '&apellido='+contacto.apellido+
+                                             '&dni='+contacto.dni +  
+                                             '&telefono='
+                                             +contacto.telefono+
+                                             '&texto='
+                                             +contacto.texto"><i class="fa-solid fa-user-pen"></i></a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </section>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container__footer">
+            <h3 class="text__footer">Codo a Codo </h3>
+            <div class="container__ico">
+                <div class="ico__footer"><i class="fa-brands fa-instagram" style="color: #f2f4f8;"></i></div>
+                <div class="ico__footer"><i class="fa-brands fa-whatsapp" style="color: #f2f4f8;"></i></div>
+                <div class="ico__footer"><i class="fa-brands fa-twitter" style="color: #f2f4f8;"></i></div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <script src="../JS_BACK/ingresarContacto.js"></script>
+    <script src="../JS_BACK/tablaContactos.js"></script>
+    
+</body>
+</html>

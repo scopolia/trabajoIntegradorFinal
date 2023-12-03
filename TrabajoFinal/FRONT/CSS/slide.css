@@ -1,0 +1,45 @@
+.container_slider{
+    display:flex;
+    width: 100%;
+    height: 80vh;
+    margin-top: 2vh;
+    align-items: center;
+}
+
+.img{
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.container__btnSlider{
+    display: flex;
+    color:red;
+    font-size: 3vw;
+    margin-top: -12vh;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.btn__slider{
+    padding: 1vw;
+}
+
+
+/*------------------------------------------------------------------------------------------*/
+
+@media screen and (max-width: 550px){
+
+
+    .container_slider{
+        display:block;
+        height: 38vh;
+        margin-top: 1vh;
+    }
+
+    .container__btnSlider{
+        font-size: 7vw;
+        margin-top: -7vh;
+    }
+
+}

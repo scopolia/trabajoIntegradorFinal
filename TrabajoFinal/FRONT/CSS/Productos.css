@@ -1,0 +1,106 @@
+.container_titulo{
+    display: flex;
+    font-size: 3vw;
+    justify-content: center;
+    margin-top: 4vh;
+    padding: 3vw;
+}
+.titulo_card{
+    color: rgb(117, 116, 117);
+    text-shadow: 1px 1px 2px  rgb(198, 107, 107);
+}
+
+
+.container_card{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.body_card{
+    box-shadow: 3px 3px 8px rgba(112, 1, 1, 0.56);
+    border-radius: 15px;
+    width: 20vw;
+    height: 68vh;
+    background:rgb(245, 245, 245);
+    margin: 2vw;
+}
+
+img{
+    width: 23vw;
+    height: 34vh;
+    border: solid 1.5px grey;
+    border-radius: 12px;
+   
+
+}
+
+
+.img_card{
+  
+    display: flex;
+    padding: 2vw;
+}
+
+.marca_card{
+    display: flex;
+    justify-content: center;
+    text-align:center;
+    font-size: 2vw;
+    color:  rgb(130, 128, 130);
+    margin: auto;
+    font-family:Barlow Condensed ;
+    
+
+}
+
+.precio_card{
+    display: flex;
+    justify-content: center;
+    font-size: 1.5vw;
+    color: purple;
+    margin-top: 5vh;
+}
+
+
+
+/*===============================__RESPONSIVE__==============================*/
+
+@media screen  and (max-width: 550px){
+
+.container_card{
+    display: block;
+   
+    
+}
+.body_card{
+    box-shadow: 3px 3px 8px rgba(112, 1, 1, 0.56);
+    border-radius: 15px;
+    width: 80%;
+    height: 60vh;
+    
+    background: rgb(245, 245, 245);
+    margin: 4vh auto 2vh auto;
+}
+.img_card{
+    display: flex;
+    justify-content: center;
+   padding-top: 8vw;
+}
+img{
+    width: 80%;
+    
+    
+}
+.marca_card{
+    font-size: 8vw;
+    margin-top: 3vw;
+}
+.precio_card{
+    font-size: 9vw;
+}
+.titulo_card{
+    font-size: 8vw;
+    text-align: center;
+}
+}

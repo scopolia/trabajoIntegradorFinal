@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital@1&family=Indie+Flower&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/Productos.css">
+    <link rel="stylesheet" href="../CSS/reset.css">
+    <link rel="stylesheet" href="../CSS/Style.css">
+    
+    
+   
+    <title>Lo q sea</title>
+    <script src="https://kit.fontawesome.com/a8c2996f32.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header >
+        <div class="container_header">
+            <div id="bt_burger" class="boton_burger"><i class="fa-solid fa-bars" style="color: #d6b53d;"></i></div>
+            <div class="logo__empresa" ><a href="../index.html"><img class="logo__bt" src="../img/logo_final.png" ></a></div>
+            <nav  class="container__bt">
+                <ul id="menu__item"class="item__menu">
+                    <li <li class="opciones__menu"><a href="Nosotros.html" class="texto__desplegado">Nosotros</a></li>
+                    
+                    <li class="opciones__menu"><a href="contactoSinLogin.html" class="texto__desplegado">Contacto</a></li>
+                    <li class="opciones__menu"><a href="loguin.html" class="texto__desplegado">Login</a></li>
+                </ul>  
+                </div>   
+            </nav> 
+        </div>    
+        <div class="Separador__menu"></div>
+        
+    </header>
+    <main >
+        <div class="container_titulo">
+            <h1 class="titulo_card">CATALOGO DE PRODUCTOS</h1>
+        </div>
+        
+                <div id="app" class="container_card" >
+                    
+                        <div v-for="producto in productos" class="body_card" >
+                        
+                            <div class="img_card"><img :src="producto.urlimgpro"  ></div>
+                            <h2 class="marca_card">{{producto.nompro}}</h2>
+                            <h3 class="precio_card">$ {{producto.preciopro}}</h3>
+                        
+                        </div>
+                        
+                </div>
+    </main>
+    <footer>
+        <div class="container__footer">
+            <h3 class="text__footer">Codo a Codo </h3>
+            <div class="container__ico">
+                <div class="ico__footer"><i class="fa-brands fa-instagram" style="color: #f2f4f8;"></i></div>
+                <div class="ico__footer"><i class="fa-brands fa-whatsapp" style="color: #f2f4f8;"></i></div>
+                <div class="ico__footer"><i class="fa-brands fa-twitter" style="color: #f2f4f8;"></i></div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../JS_FRONT/menu_burger.js" type="module"></script>
+    <script src="../JS_FRONT/Productos.js"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+/*------------------------------------------BANNER ANIMATED----------------------------------*/
+.container__banner{
+    display: flex;
+    background: rgb(214, 213, 214);
+    margin-top: 3.5vh;
+    overflow: hidden 
+}
+
+.img_banner{
+    width:12vw ;
+    height: 7vh;
+    margin: auto 2vh auto 2vh;
+}
+
+
+.banner {
+    display: inline-flex;
+    width: 50%;
+    height: 10vh;
+    background: rgb(214, 213, 214);
+    animation: despejar 10s linear infinite ;
+}
+
+@keyframes despejar {
+    from{
+        transform: translateX(-60vw)  ;
+    }
+    to{
+        transform: translateX(100vw) ;
+        
+    }
+}
+
+
+/*-------------------------CARD AREA-------------------------------------*/
+
+
+.card__area{
+    
+    display:flex;
+    justify-content: space-between;
+    background: whitesmoke;
+    width: 100%;
+    height: 70vh;
+    margin-top: 3.5vh;
+    margin-bottom: 3vh;
+}
+.card__container {
+    margin: 5vh 7vw ;
+    width: 20%;
+    height: 60vh;
+    box-shadow: 3px 3px 8px rgba(159, 157, 157, 0.45);
+    border-radius: 5%;
+}
+
+.img__card{
+    display: block;
+    margin: 3vh auto ;
+    width: 11vw;
+    height: 20vh;
+    
+}
+
+.red_social{
+    
+    width: 9vw;
+    height: 16vh;
+    margin: 5vh auto;
+}
+
+.card__label{
+    font-family: Barlow Condensed;
+    text-align: center;
+    font-size: 2.5vw;
+    margin-top: 2vh;
+}
+
+.text__card{  
+    margin-top: 2vh;
+    padding: 1vw;
+    text-align: center;
+    font-family:  Barlow Condensed;
+}
+
+
+
+
+/*--------------------------------BANNER FIJO-------------------------------------------*/
+
+
+.container__banner-fijo{
+    display: inline-flex;
+    width: 100%;
+    height: 10vh;
+    background: rgba(214, 213, 214, 0.412);
+    margin-bottom: 3vh;
+    justify-content: center;
+
+}
+
+.banner-fijo{
+    display: flex;
+    align-items: center;
+}
+
+.img_banner-fijo{
+    width: 7vw;
+    height: 8vh;
+    margin-left: 7vw;
+}
+
+.puma{
+    width: 11vw;
+    height: 13vh;
+}
+/*----------------------------------------CARD ROTATE------------------------------*/
+
+.container__card-rotate{
+   display: grid;
+   grid-template-columns:auto auto auto auto;
+   justify-content: center;
+   grid-gap: 3vw;
+   background:whitesmoke ;
+}
+
+
+.card__rotate{
+    display: flex;
+    position: relative;
+    width: 20vw;
+    height: 35vh;
+    margin-bottom: 12vh;  
+    margin-top: 12vh;
+}
+
+
+.card__rotate div{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transition: 1s;
+}
+
+
+.card__rotate .face__front{
+    
+    transform: perspective(500px) rotateY(0deg);
+}
+
+
+.card__rotate .face__back{
+  
+    transform: perspective(500px) rotateY(180deg);
+}
+
+
+.card__rotate:hover .face__front{
+    
+    transform: perspective(500px) rotateY(180deg);
+}
+
+
+.card__rotate:hover .face__back{
+    
+    transform: perspective(500px) rotateY(360deg);
+}
+
+
+.img__card-rotate{
+    width: 100%;
+    height: 100%;
+    border-radius: 24px;
+    box-shadow: 0.5vw 0.5vw 2vw gray;
+}
+.text__card-rotate{
+    position:absolute;
+    font-size: 2vw;
+    color: whitesmoke;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-shadow: 1vh 0.6vh 0.5vw #140b14;
+}
+
+.face__back{
+    background: rgb(0 0 0 / 62%);
+    border-radius: 24px;
+    box-shadow: 0.5vw 0.5vw 2vw gray;
+}
+
+.label__card-rotate{
+    color: white;
+    font-size: 2vw;
+    text-align: center;
+    padding: 2vw;
+}
+
+.text__face-back{
+    color: aliceblue;
+    text-align: center;
+    padding: 1vh;
+}
+
+/*===============================__RESPONSIVE__==============================*/
+
+@media screen  and (max-width: 550px){
+
+    /*----- banner animated---------*/
+
+    .container__banner{
+        width: 100vw;
+        height: 5vh;
+        align-items: center;
+    }
+    .banner{
+        height: 5vh;
+    }
+    .img_banner{
+        height: 3.5vh;
+        width: 21vw;
+    }
+    .visa{
+        width: 90vw;
+        height: 5vh;
+    }
+
+    /*---------card--------------------*/
+
+    .card__area{
+        display: block;
+        height: auto;
+        padding-block: 3vh;
+    }
+    .card__container{
+        width: 80%;
+        margin: auto;
+        height: 50vh;
+
+    }
+    .img__card{
+        width: 30vw;
+        height: 12vh;
+       
+    }
+    .text__contain{
+        font-size: 3vh;
+    }
+    .card__label{
+        font-size: 5vh;
+    }
+    .text__card{
+        padding: 1vh;
+    }
+
+    /*-------banner fijo---------*/
+
+    .container__banner-fijo{
+        height: 5vh;
+    }
+    .img_banner-fijo{
+        height: 4vh;
+        width: 11vw;
+    }
+
+    /*-------card roate------------*/
+
+    .container__card-rotate{
+        display: block;
+        padding-block: 3vh;
+    }
+
+    .card__rotate{
+        margin: 2vh auto 4vh auto;
+        width: 80%;
+        text-align: center;
+    }
+    .face__front{
+        margin: 2vh auto;
+    }
+    .text__card-rotate{
+        font-size: 4vh;
+    }
+    .face__back{
+        margin: 2vh auto;
+    }
+    .label__card-rotate{
+        font-size: 4vh;
+        margin-top: 3vh;
+    }
+    .text__face-back{
+        font-size: 3vh;
+        margin-top: 2vh;
+    }
+   
+}
